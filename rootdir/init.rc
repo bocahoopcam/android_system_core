@@ -946,7 +946,8 @@ on property:sys.init_log_level=*
     loglevel ${sys.init_log_level}
 
 on charger
-    class_start charger
+    #class_start charger
+    trigger late-init
 
 on property:vold.decrypt=trigger_load_persist_props
     load_persist_props
